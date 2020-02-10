@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>切版 Demo</title>
+
+    <!-- 加入引用 main.css -->
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <!-- 切版型，版面共分為三格區塊，左側選單、TOP 區塊、MAIN 區塊、FOOTER 區塊 -->
+    <div class="menu">
+      <div class="menu_title">
+        <div class="menu_picture"></div>
+        <span>JC</span>
+      </div>
+      <div class="menu_ul">
+        <!-- 正常 ul 是無序 都是會有小點點，因為有套用 reset.css ，
+        裡面有加了一個屬性 list-style: none;
+        這代表的意思是他已經幫你把標號或是序號通通都拿掉了 -->
+        <ul>
+          <li>Home</li>
+          <li>Page1</li>
+          <li>Page2</li>
+          <li>Page3</li>
+        </ul>
+      </div>
+      <div class="menu_link">
+        <div class="icon-facebook"></div>
+        <div class="icon-github"></div>
+        <div class="icon-twitter"></div>
+      </div>
+    </div>
+    <div class="content"></div>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>切版 1</title>
+    <style>
+      table {
+        /* 表格置中 */
+        margin: 0px auto;
+      }
+      table tr td {
+        border: 5px solid black;
+      }
+
+      /* 使用 className 的作法 */
+      .setTD {
+        background-color: #f13e68;
+      }
+
+      /* 使用 ID 的作法 */
+      #TD_ID_TEST {
+        background-color: #f13e68;
+      }
+
+      /* 使用 ID 並且網內層找標籤的作法 */
+      #TD_ID_TEST1 label{
+        color: #f13e68;
+      }
+    </style>
+  </head>
+  <body align="center">
+    <label> 切版 Day 2</label>
+    <br />
+    <br />
+
+    <!-- border="5" 表示欄位邊框粗度 -->
+    <!-- align='center' 表示欄位置中 -->
+    <table>
+      <caption>
+        HI! 我是資料表標題
+      </caption>
+      <tr>
+        <td rowspan="2" class="setTD">
+          直合併格子
+        </td>
+        <!-- CSS 套用優先順序 => style 優先權高於 className -->
+        <!-- CSS 套用優先順序 => id 優先權高於 className -->
+        <!-- 大魔王例外 !important 該屬性會將優先權拉到最高 -->
+        <!-- CSS 在樣式內寫的屬性又先順序，最後一個樣式屬性的權限會比上面的高 -->
+
+        <!-- vertical-align:middle; 表示垂直置中 -->
+        <!-- text-align: center; 表示文字置中 -->
+        <td
+          colspan="2"
+          style="height:150px;width:200px;vertical-align:middle;"
+          class="setTD"
+        >
+          橫合併格子
+        </td>
+      </tr>
+      <tr>
+        <!-- 因為使用 rowspan="2" 所以這裡要少掉一個欄位 td 設定 -->
+        <!-- <td>
+            格子 1
+        </td> -->
+        <td id="TD_ID_TEST">
+          格子 2
+        </td>
+        <td  id="TD_ID_TEST1">
+          <label>格子 3</label>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

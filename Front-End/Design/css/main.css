@@ -1,0 +1,89 @@
+@import "./reset.css";
+
+/* **************** */
+/*  主要的樣板設定   */
+/* **************** */
+
+/* 主版樣式設定 */
+/* ---------------------------------------------------------------- */
+/* 選單 */
+.menu {
+  /* vh 屬性作用是讓左側選單高度能夠隨著視窗高度做改變 [螢幕可視範圍高度的百分比] */
+  /* 說明參考 https://pjchender.blogspot.com/2015/04/css-3vh-vw.html */
+  height: 100vh;
+  width: 300px;
+  background-color: #7c7c7c;
+
+  /* 靠左浮動排列 */
+  float: left;
+}
+
+/* 主頁面 */
+.content {
+  /* vh 是跟著視窗高度，所以 vw 就是跟著視窗寬度 */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(226, 129, 129);
+}
+
+/* 選單區塊樣式設定 */
+/* ---------------------------------------------------------------- */
+.menu_title {
+  /* 這裡是讓 menu_title div 區塊與 menu div 區塊寬度一致 */
+  width: 100%;
+  height: 100px;
+
+  /* 設定 menu title div 區塊底色 */
+  background-color: #4a4a4a;
+}
+
+/* menu 選單內的 title 內的 圖片 */
+.menu .menu_title .menu_picture {
+  /* 定義 div 區塊大小 */
+  width: 65px;
+  height: 40px;
+
+  /* 設定背景圖片大小為 高為50px 寬度自動 */
+  background-size: 50px auto;
+  background: url("../images/nissan-gt-r.jpg");
+
+  /* 因為我們套用圖片是使用 div，div 本身是一個區塊所以他會將文字部分往下推，使用 inline-block 可以讓圖片與文字並列 */
+  display: inline-block;
+}
+
+.menu .menu_link {
+  width: 100%;
+
+  /* position 是用來定位的，設定 absolute 代表它是一個孩子，我們要給他一個父親
+    使孩子可以根據父親的區塊範圍定位，假設不給父親，則預設會自動認 body 為父親
+    如果是認 body 為父親，可能會出現區塊一直跑在你不想設定的位置上 */
+  /* 這裡對於 menu_link 來說父親就是 menu */
+  position: absolute;
+
+  /* 讓它距離目前的父親左邊界 0 px */
+  left: 0;
+  /* 讓它距離目前的父親下邊界 0 px */
+  bottom: 0;
+}
+
+/*因為三張圖片的顯示範圍以及區塊模式都是一樣的所以統一寫在div標籤上*/
+.menu .menu_link div {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+}
+
+.menu .menu_link .icon-facebook {
+  background: url("../images/icon-fb.png") no-repeat;
+  background-size: auto 20px;
+}
+
+.menu .menu_link .icon-github {
+  background: url("../images/icon-github.svg") no-repeat;
+  background-size: auto 20px;
+}
+
+.menu .menu_link .icon-twitter {
+  background: url("../images/icon-twitter.png") no-repeat;
+  background-size: auto 20px;
+}

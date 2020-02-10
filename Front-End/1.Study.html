@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>切版 1</title>
+  </head>
+  <body align="center">
+    <label> 切版 Day 1</label>
+    <br />
+    <br />
+
+    <!-- border="5" 表示欄位邊框粗度 -->
+    <!-- align='center' 表示欄位置中 -->
+    <table border="5" align="center">
+      <caption>
+        HI!我是標題
+      </caption>
+      <tr>
+        <td rowspan="2">
+          格子 2
+        </td>
+        <!-- vertical-align:middle; 表示垂直置中 -->
+        <!-- text-align: center; 表示文字置中 -->
+        <td colspan="2" style="height:150px;width:200px;vertical-align:middle;">
+          合併格子
+        </td>
+      </tr>
+      <tr>
+        <!-- 因為使用 rowspan="2" 所以這裡要少掉一個欄位 td 設定 -->
+        <!-- <td>
+            格子 1
+        </td> -->
+        <td>
+          格子 2
+        </td>
+        <td>
+          格子 3
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
